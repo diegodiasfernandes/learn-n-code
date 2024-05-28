@@ -1,0 +1,238 @@
+
+========================== Generation 0 ==========================
+ind 0 -> Chromosome: [10, 15, 22]
+ Fitness: 23.5
+ind 1 -> Chromosome: [2, 20, 21]
+ Fitness: 31.0
+ind 2 -> Chromosome: [3, 18, 28]
+ Fitness: 34.0
+ind 3 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 4 -> Chromosome: [10, 18, 27]
+ Fitness: 28.8
+ind 5 -> Chromosome: [4, 16, 25]
+ Fitness: 29.0
+ind 6 -> Chromosome: [2, 20, 26]
+ Fitness: 36.0
+ind 7 -> Chromosome: [9, 17, 30]
+ Fitness: 31.88888888888889
+ind 8 -> Chromosome: [1, 14, 24]
+ Fitness: 38.0
+ind 9 -> Chromosome: [7, 20, 27]
+ Fitness: 29.857142857142858
+========================== Generation 1 ==========================
+ind 0 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 1 -> Chromosome: [2, 20, 26]
+ Fitness: 36.0
+ind 2 -> Chromosome: [10, 11, 26]
+ Fitness: 27.1
+ind 3 -> Chromosome: [2, 20, 24]
+ Fitness: 34.0
+ind 4 -> Chromosome: [2, 14, 24]
+ Fitness: 31.0
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 6 -> Chromosome: [2, 18, 27]
+ Fitness: 36.0
+ind 7 -> Chromosome: [10, 20, 26]
+ Fitness: 28.0
+ind 8 -> Chromosome: [2, 11, 27]
+ Fitness: 32.5
+ind 9 -> Chromosome: [7, 20, 26]
+ Fitness: 28.857142857142858
+-------------------------- Best Individual --------------------------
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+========================== Generation 2 ==========================
+ind 0 -> Chromosome: [2, 20, 22]
+ Fitness: 32.0
+ind 1 -> Chromosome: [2, 18, 27]
+ Fitness: 36.0
+ind 2 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 3 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 4 -> Chromosome: [2, 14, 27]
+ Fitness: 34.0
+ind 5 -> Chromosome: [2, 11, 24]
+ Fitness: 29.5
+ind 6 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 7 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 8 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 9 -> Chromosome: [1, 11, 23]
+ Fitness: 34.0
+-------------------------- Best Individual --------------------------
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+========================== Generation 3 ==========================
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 1 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 2 -> Chromosome: [9, 18, 27]
+ Fitness: 29.0
+ind 3 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 4 -> Chromosome: [8, 20, 27]
+ Fitness: 29.5
+ind 5 -> Chromosome: [2, 14, 25]
+ Fitness: 32.0
+ind 6 -> Chromosome: [1, 11, 24]
+ Fitness: 35.0
+ind 7 -> Chromosome: [2, 11, 23]
+ Fitness: 28.5
+ind 8 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 9 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 4 ==========================
+ind 0 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 1 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 2 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 3 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 4 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 6 -> Chromosome: [2, 17, 25]
+ Fitness: 33.5
+ind 7 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 8 -> Chromosome: [2, 11, 24]
+ Fitness: 29.5
+ind 9 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 5 ==========================
+ind 0 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 1 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 2 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 3 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 4 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 5 -> Chromosome: [2, 20, 24]
+ Fitness: 34.0
+ind 6 -> Chromosome: [2, 20, 29]
+ Fitness: 39.0
+ind 7 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 8 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 9 -> Chromosome: [2, 20, 23]
+ Fitness: 33.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 6 ==========================
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 1 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 2 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 3 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 4 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 6 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 7 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 8 -> Chromosome: [2, 20, 25]
+ Fitness: 35.0
+ind 9 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 7 ==========================
+ind 0 -> Chromosome: [3, 13, 29]
+ Fitness: 33.333333333333336
+ind 1 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 2 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 3 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 4 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 5 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 6 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 7 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 8 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 9 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 8 ==========================
+ind 0 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 1 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 2 -> Chromosome: [3, 13, 25]
+ Fitness: 29.333333333333332
+ind 3 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 4 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 5 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 6 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 7 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 8 -> Chromosome: [6, 20, 25]
+ Fitness: 28.333333333333332
+ind 9 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+========================== Generation 9 ==========================
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 1 -> Chromosome: [1, 20, 23]
+ Fitness: 43.0
+ind 2 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 3 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 4 -> Chromosome: [1, 20, 24]
+ Fitness: 44.0
+ind 5 -> Chromosome: [1, 14, 29]
+ Fitness: 43.0
+ind 6 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 7 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
+ind 8 -> Chromosome: [1, 20, 25]
+ Fitness: 45.0
+ind 9 -> Chromosome: [6, 20, 25]
+ Fitness: 28.333333333333332
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [1, 20, 29]
+ Fitness: 49.0
