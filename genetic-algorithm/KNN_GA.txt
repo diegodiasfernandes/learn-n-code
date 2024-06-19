@@ -1,0 +1,237 @@
+========================== Generation 0 ==========================
+ind 0 -> Chromosome: [20, 'distance', 'cosine']
+ Fitness: 0.7777777777777778
+ind 1 -> Chromosome: [17, 'uniform', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 2 -> Chromosome: [13, 'uniform', 'jaccard']
+ Fitness: 0.3888888888888889
+ind 3 -> Chromosome: [19, 'uniform', 'euclidean']
+ Fitness: 0.7777777777777778
+ind 4 -> Chromosome: [5, 'distance', 'manhattan']
+ Fitness: 0.7777777777777778
+ind 5 -> Chromosome: [28, 'distance', 'euclidean']
+ Fitness: 0.7777777777777778
+ind 6 -> Chromosome: [15, 'distance', 'chebyshev']
+ Fitness: 0.7777777777777778
+ind 7 -> Chromosome: [3, 'uniform', 'minkowski']
+ Fitness: 0.7407407407407407
+ind 8 -> Chromosome: [28, 'uniform', 'cosine']
+ Fitness: 0.7037037037037037
+ind 9 -> Chromosome: [4, 'uniform', 'minkowski']
+ Fitness: 0.7222222222222222
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.724074074074074
+========================== Generation 1 ==========================
+ind 0 -> Chromosome: [19, 'distance', 'minkowski']
+ Fitness: 0.7962962962962963
+ind 1 -> Chromosome: [4, 'uniform', 'chebyshev']
+ Fitness: 0.7222222222222222
+ind 2 -> Chromosome: [19, 'uniform', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 3 -> Chromosome: [3, 'uniform', 'euclidean']
+ Fitness: 0.7407407407407407
+ind 4 -> Chromosome: [4, 'distance', 'manhattan']
+ Fitness: 0.7777777777777778
+ind 5 -> Chromosome: [17, 'uniform', 'minkowski']
+ Fitness: 0.7592592592592593
+ind 6 -> Chromosome: [20, 'distance', 'cosine']
+ Fitness: 0.7777777777777778
+ind 7 -> Chromosome: [28, 'uniform', 'chebyshev']
+ Fitness: 0.7962962962962963
+ind 8 -> Chromosome: [5, 'distance', 'chebyshev']
+ Fitness: 0.7407407407407407
+ind 9 -> Chromosome: [15, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.7722222222222223
+========================== Generation 2 ==========================
+ind 0 -> Chromosome: [28, 'distance', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 1 -> Chromosome: [28, 'uniform', 'chebyshev']
+ Fitness: 0.7962962962962963
+ind 2 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 3 -> Chromosome: [17, 'distance', 'minkowski']
+ Fitness: 0.7962962962962963
+ind 4 -> Chromosome: [19, 'uniform', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 5 -> Chromosome: [19, 'uniform', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 6 -> Chromosome: [28, 'distance', 'cosine']
+ Fitness: 0.7962962962962963
+ind 7 -> Chromosome: [28, 'uniform', 'chebyshev']
+ Fitness: 0.7962962962962963
+ind 8 -> Chromosome: [23, 'distance', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 9 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.7962962962962962
+========================== Generation 3 ==========================
+ind 0 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 1 -> Chromosome: [19, 'uniform', 'chebyshev']
+ Fitness: 0.7777777777777778
+ind 2 -> Chromosome: [19, 'distance', 'minkowski']
+ Fitness: 0.7962962962962963
+ind 3 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 4 -> Chromosome: [28, 'distance', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 5 -> Chromosome: [17, 'distance', 'cosine']
+ Fitness: 0.7777777777777778
+ind 6 -> Chromosome: [19, 'distance', 'minkowski']
+ Fitness: 0.7962962962962963
+ind 7 -> Chromosome: [19, 'uniform', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 8 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 9 -> Chromosome: [19, 'distance', 'cosine']
+ Fitness: 0.7777777777777778
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.8055555555555556
+========================== Generation 4 ==========================
+ind 0 -> Chromosome: [19, 'uniform', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 1 -> Chromosome: [19, 'uniform', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 2 -> Chromosome: [17, 'distance', 'euclidean']
+ Fitness: 0.7962962962962963
+ind 3 -> Chromosome: [28, 'distance', 'cosine']
+ Fitness: 0.7962962962962963
+ind 4 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 5 -> Chromosome: [28, 'distance', 'cosine']
+ Fitness: 0.7962962962962963
+ind 6 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 7 -> Chromosome: [28, 'distance', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 8 -> Chromosome: [19, 'uniform', 'minkowski']
+ Fitness: 0.7777777777777778
+ind 9 -> Chromosome: [28, 'distance', 'minkowski']
+ Fitness: 0.7777777777777778
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.7962962962962962
+========================== Generation 5 ==========================
+ind 0 -> Chromosome: [17, 'distance', 'euclidean']
+ Fitness: 0.7962962962962963
+ind 1 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 2 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 3 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 4 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 5 -> Chromosome: [19, 'distance', 'cosine']
+ Fitness: 0.7777777777777778
+ind 6 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 7 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 8 -> Chromosome: [27, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 9 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.8277777777777778
+========================== Generation 6 ==========================
+ind 0 -> Chromosome: [17, 'uniform', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 1 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 2 -> Chromosome: [27, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 3 -> Chromosome: [9, 'distance', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 4 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 5 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 6 -> Chromosome: [15, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 7 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 8 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 9 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.8296296296296296
+========================== Generation 7 ==========================
+ind 0 -> Chromosome: [8, 'distance', 'manhattan']
+ Fitness: 0.7962962962962963
+ind 1 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 2 -> Chromosome: [19, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 3 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 4 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 5 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 6 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 7 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 8 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 9 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.837037037037037
+========================== Generation 8 ==========================
+ind 0 -> Chromosome: [22, 'uniform', 'manhattan']
+ Fitness: 0.7777777777777778
+ind 1 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 2 -> Chromosome: [28, 'distance', 'chebyshev']
+ Fitness: 0.7777777777777778
+ind 3 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 4 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 5 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 6 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 7 -> Chromosome: [25, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 8 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 9 -> Chromosome: [28, 'distance', 'cosine']
+ Fitness: 0.7962962962962963
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.8240740740740741
+========================== Generation 9 ==========================
+ind 0 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 1 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 2 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 3 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 4 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 5 -> Chromosome: [25, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 6 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ind 7 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 8 -> Chromosome: [17, 'distance', 'manhattan']
+ Fitness: 0.8333333333333334
+ind 9 -> Chromosome: [25, 'uniform', 'manhattan']
+ Fitness: 0.7777777777777778
+-------------------------- Accuracy Mean --------------------------
+ Acc: 0.837037037037037
+-------------------------- Best Individual --------------------------
+ind 0 -> Chromosome: [28, 'distance', 'manhattan']
+ Fitness: 0.8518518518518519
+ -------------------------- Generetion Means --------------------------
+[0.724074074074074, 0.7722222222222223, 0.7962962962962962, 
+0.8055555555555556, 0.7962962962962962, 0.8277777777777778, 
+0.8296296296296296, 0.837037037037037, 0.8240740740740741, 0.837037037037037]
