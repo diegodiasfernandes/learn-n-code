@@ -8,6 +8,8 @@ Before getting started, ensure you have Ollama installed. You can download it fr
 
 - [Download Ollama](https://ollama.com/download)
 
+![image](https://github.com/user-attachments/assets/99284b6a-4dd5-4eb2-8d1a-7d8bd2c6bd25)
+
 ## Commands
 
 To run the chatbot, use the following command in the **command prompt**:
