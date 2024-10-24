@@ -10,6 +10,13 @@ Before getting started, ensure you have Ollama installed. You can download it fr
 
 ![image](https://github.com/user-attachments/assets/99284b6a-4dd5-4eb2-8d1a-7d8bd2c6bd25)
 
+- Check if the installation was successful running the following at your command prompt
+```
+ollama
+```
+
+![checking ollama installation](https://github.com/user-attachments/assets/9ee5634e-6300-4d67-8344-9d9bfa77aa29)
+
 ## Commands
 
 To run the chatbot, use the following command in the **command prompt**:
