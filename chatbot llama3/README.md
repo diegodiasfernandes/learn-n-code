@@ -27,7 +27,7 @@ ollama run llama3 # check if you have enough RAM
 
 ![cmd ollama install](https://github.com/user-attachments/assets/5edcece5-8a55-4322-b81b-a209c9140b07)
 
-## Last Settings needed!
+## Final Settings needed!
 ```
 pip install langchain langchain-ollama ollama
 pip install tkinter
