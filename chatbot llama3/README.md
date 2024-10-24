@@ -16,8 +16,13 @@ To run the chatbot, use the following command in the **command prompt**:
 ollama run llama3 # check if you have enough RAM
 ```
 
+![cmd ollama install](https://github.com/user-attachments/assets/5edcece5-8a55-4322-b81b-a209c9140b07)
+
 ## Last Settings needed!
 ```
 pip install langchain langchain-ollama ollama
 pip install tkinter
 ```
+![pip installing at vscode](https://github.com/user-attachments/assets/3443cfde-5bb9-4247-9730-58d7ae4a06a4)
+
+
