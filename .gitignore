@@ -1,0 +1,21 @@
+# Ignore cache directories
+**/cache/
+**/Caches/
+
+# Ignore common cache file types
+*.cache
+*.log
+*.tmp
+*.swp
+
+# Ignore VS Code cache and settings
+.vscode/*
+# Ignore Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment folders
+venv/
+env/
