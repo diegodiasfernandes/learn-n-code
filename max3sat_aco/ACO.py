@@ -56,8 +56,8 @@ class ACO:
         self.ants_arr: list[Ant]        = []
         self.best_performance           = 0
 
-        self.total_ants: int            = 100
-        self.n_offline_ants: int        = 10
+        self.total_ants: int            = 500
+        self.n_offline_ants: int        = 15
 
     def readSAT(self):
         with open(self.file_path, 'r') as file:
@@ -96,7 +96,7 @@ class ACO:
             ant = self.generateAnt(True)
             parameters = ant.getParameters(self.graph, self.variables)
             ant.performance = self.performance(parameters)
-            self.addPheromones(ant)
+            self.addPheromones(ant, offline_phase=True)
             
             self.ants_arr.append(ant)
 
@@ -121,17 +121,19 @@ class ACO:
         
         return max(self.ants_arr, key=lambda ant: ant.performance)
 
-    def addPheromones(self, ant: Ant):
+    def addPheromones(self, ant: Ant, offline_phase: bool = False):
         def pheromonesEquation(ant: Ant):
             performance = ant.performance / self.total_clauses_num
             e: float = 2.71
             sig: float = 1 / (1 + (e ** (-performance + 0.4)))
             performance_component: float = (sig + 0.55) ** 20
 
-            stamp = math.ceil(math.log10(ant.index+1))
-            index_component = 3.5 * stamp
+            stamp = (math.log10(ant.index+1))
+            index_component = 1 * stamp
+            if offline_phase:
+                index_component = 1
 
-            pheromones = (performance_component + index_component) / 2
+            pheromones = (performance_component * index_component) / 2
 
             if performance >= self.best_performance: 
                 pheromones += 5
