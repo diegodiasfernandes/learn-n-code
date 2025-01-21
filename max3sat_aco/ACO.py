@@ -46,7 +46,7 @@ class ACO:
         self.best_ant: Ant              = Ant(-1, 0, -1)
 
         self.total_ants: int            = 500
-        self.n_offline_ants: int        = 15
+        self.n_offline_ants: int        = 20
 
     def readSAT(self):
         with open(self.file_path, 'r') as file:
@@ -144,8 +144,8 @@ class ACO:
             ant = Ant(self.current_index, 0)
 
         else:
-            alpha_map: dict[int, float] = {0: 1, 1: 1, 2: 1, 3: 1}
-            ant = Ant(self.current_index, alpha_map[self.current_index % 4])
+            alpha_map: dict[int, float] = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+            ant = Ant(self.current_index, alpha_map[self.current_index % 5])
         
         self.current_index += 1
 
