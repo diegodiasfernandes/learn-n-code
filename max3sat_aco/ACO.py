@@ -3,25 +3,14 @@ import math
 from random import choice
 
 class Ant:
-    def __init__(self, index: int, alpha: int):
+    def __init__(self, index: int, alpha: int, performance: float = 0):
         self.index: int = index
         self.alpha: int = alpha
         self.parameters: dict | None = None
-        self.performance: int = 0
+        self.performance: float = performance
 
     def __str__(self):
         return f'Ant {self.index}: {self.parameters} \n  Performance => {self.performance}'
-
-    def getParameters(self, graph: dict, variables: list):
-        parameters = {}
-        for v in variables:
-            next_options = graph[v]
-            chosen_option = self.nextMove(next_options, self.alpha)
-            parameters[v] = chosen_option
-        
-        self.parameters = parameters
-        
-        return parameters
 
     def nextMove(self, value_options: dict, alpha: float):
         def adjustPheromones():
@@ -54,7 +43,7 @@ class ACO:
         self.graph: dict                = {}
         self.current_index: int         = 0
         self.ants_arr: list[Ant]        = []
-        self.best_performance           = 0
+        self.best_ant: Ant              = Ant(-1, 0, -1)
 
         self.total_ants: int            = 500
         self.n_offline_ants: int        = 15
@@ -94,8 +83,8 @@ class ACO:
         # offline search
         for _ in range(self.n_offline_ants):
             ant = self.generateAnt(True)
-            parameters = ant.getParameters(self.graph, self.variables)
-            ant.performance = self.performance(parameters)
+            parameters = self.getParameters(ant)
+            ant.performance = self.performance(ant)
             self.addPheromones(ant, offline_phase=True)
             
             self.ants_arr.append(ant)
@@ -108,8 +97,8 @@ class ACO:
         # online search
         for _ in range(self.n_offline_ants, self.total_ants):
             ant = self.generateAnt()
-            parameters = ant.getParameters(self.graph, self.variables)
-            ant.performance = self.performance(parameters)
+            parameters = self.getParameters(ant)
+            ant.performance = self.performance(ant)
 
             self.addPheromones(ant)
             self.evaporate()
@@ -132,11 +121,10 @@ class ACO:
                 index_component = 1
 
             pheromones = (performance_component * index_component)
-
-            if performance >= self.best_performance: 
-                pheromones += 5
-                self.best_performance = performance
             
+            if ant.performance > self.best_ant.performance: 
+                pheromones += 5
+
             return pheromones
 
         add_pheromones = pheromonesEquation(ant)
@@ -167,11 +155,26 @@ class ACO:
         min_phero = 1
         self.graph = {v: {True: min_phero, False: min_phero} for v in self.variables}
 
-    def performance(self, parameters: dict): # parameters = {0: True, 1: False}
+    def getParameters(self, ant: Ant):
+        if ant.index % self.n_offline_ants == self.n_offline_ants - 1:
+            ant.parameters = self.best_ant.parameters
+            return ant.parameters
+
+        parameters = {}
+        for v in self.variables:
+            next_options = self.graph[v]
+            chosen_option = ant.nextMove(next_options, ant.alpha)
+            parameters[v] = chosen_option
+        
+        ant.parameters = parameters
+        
+        return parameters
+
+    def performance(self, ant: Ant): # parameters = {0: True, 1: False}
         count = 0
         for clause in self.clauses:
             for variable in clause.keys():
-                var_state = parameters[variable]
+                var_state = ant.parameters[variable]
                 if clause[variable] == -1:
                     var_state = not var_state
 
@@ -179,4 +182,7 @@ class ACO:
                     count += 1
                     break
         
+        if count > self.best_ant.performance: 
+            self.best_ant = ant
+
         return count
