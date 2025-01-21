@@ -54,7 +54,6 @@ class ACO:
         self.graph: dict                = {}
         self.current_index: int         = 0
         self.ants_arr: list[Ant]        = []
-        self.max_pheromones             = 0
         self.best_performance           = 0
 
         self.total_ants: int            = 100
@@ -80,7 +79,6 @@ class ACO:
                 self.clauses.append(clause)
 
         self.total_clauses_num = len(self.clauses)
-        self.max_pheromones = self.total_clauses_num * 3
 
     def initialize(self):
         self.readSAT()
@@ -145,8 +143,6 @@ class ACO:
         for v in self.variables:
             chosen_param = ant.parameters[v]
             self.graph[v][chosen_param] += add_pheromones
-            if self.graph[v][chosen_param] > self.max_pheromones:
-                self.graph[v][chosen_param] = self.max_pheromones
 
     def evaporate(self):
         for v in self.variables:
