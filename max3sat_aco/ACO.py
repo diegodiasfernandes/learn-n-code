@@ -124,16 +124,14 @@ class ACO:
     def addPheromones(self, ant: Ant, offline_phase: bool = False):
         def pheromonesEquation(ant: Ant):
             performance = ant.performance / self.total_clauses_num
-            e: float = 2.71
-            sig: float = 1 / (1 + (e ** (-performance + 0.4)))
-            performance_component: float = (sig + 0.55) ** 20
+            performance_component = (performance ** 10) * 100
 
             stamp = (math.log10(ant.index+1))
             index_component = 1 * stamp
             if offline_phase:
                 index_component = 1
 
-            pheromones = (performance_component * index_component) / 2
+            pheromones = (performance_component * index_component)
 
             if performance >= self.best_performance: 
                 pheromones += 5
@@ -158,7 +156,7 @@ class ACO:
             ant = Ant(self.current_index, 0)
 
         else:
-            alpha_map: dict[int, float] = {0: 0.8, 1: 1, 2: 2, 3: 3}
+            alpha_map: dict[int, float] = {0: 1, 1: 1, 2: 1, 3: 1}
             ant = Ant(self.current_index, alpha_map[self.current_index % 4])
         
         self.current_index += 1
