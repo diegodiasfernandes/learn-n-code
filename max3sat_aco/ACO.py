@@ -48,7 +48,7 @@ class Ant:
 class ACO:
     def __init__(self, file_path: str = 'path_to_sat_file'):
         self.file_path: str             = file_path
-        self.variables: list            = []
+        self.variables: set             = set()
         self.clauses: list[dict]        = []
         self.total_clauses_num: int     = 0
         self.graph: dict                = {}
@@ -70,7 +70,7 @@ class ACO:
                         else:
                             clause[abs(num)] = -1
 
-                        self.variables.append(num)
+                        self.variables.add(abs(num))
                     except ValueError:
                         continue
 

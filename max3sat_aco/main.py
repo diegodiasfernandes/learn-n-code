@@ -1,7 +1,7 @@
 from ACO import ACO
 from randomSearch import RandomSearch
 
-aco = ACO('max3sat_aco\examples\SAT1.txt')
+aco = ACO('max3sat_aco\examples\SAT2.txt')
 best_ant, time = aco.initialize()
 print('=================================================')
 print(aco.graph)
