@@ -144,8 +144,11 @@ class ACO:
             ant = Ant(self.current_index, 0)
 
         else:
-            alpha_map: dict[int, float] = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
-            ant = Ant(self.current_index, alpha_map[self.current_index % 5])
+            rate = 10
+            alpha_map: dict[int, float] = {mod:1 for mod in range(rate)}
+            alpha_map[rate-1] = 0.8
+            alpha_map[rate-2] = 1.2
+            ant = Ant(self.current_index, alpha_map[self.current_index % rate])
         
         self.current_index += 1
 
