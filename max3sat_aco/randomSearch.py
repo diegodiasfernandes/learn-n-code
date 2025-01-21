@@ -46,7 +46,7 @@ class Ant:
         return chosen_option
 
 class RandomSearch:
-    def __init__(self, file_path: str = 'path_to_sat_file'):
+    def __init__(self, file_path: str = 'path_to_sat_file', total_tries:int=500):
         self.file_path: str             = file_path
         self.variables: set             = set()
         self.clauses: list[dict]        = []
@@ -56,7 +56,7 @@ class RandomSearch:
         self.ants_arr: list[Ant]        = []
         self.best_performance           = 0
 
-        self.total_ants: int            = 100
+        self.total_ants: int            = total_tries
         self.n_offline_ants: int        = 15
 
     def readSAT(self):
