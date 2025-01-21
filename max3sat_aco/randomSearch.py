@@ -44,7 +44,7 @@ class Ant:
 
         return chosen_option
 
-class ACO:
+class RandomSearch:
     def __init__(self, file_path: str = 'path_to_sat_file'):
         self.file_path: str             = file_path
         self.variables: list            = []
@@ -73,7 +73,7 @@ class ACO:
                 self.clauses.append(clause)
 
         self.total_clauses_num = len(self.clauses)
-        self.max_pheromones = self.total_clauses_num * 3
+        self.max_pheromones = self.total_clauses_num * 2
 
     def initialize(self):
         self.readSAT()
@@ -92,17 +92,16 @@ class ACO:
             parameters = ant.getParameters(self.graph, self.variables)
             ant.performance = self.performance(parameters)
             self.addPheromones(ant)
-            
+            self.evaporate()
+
             self.ants_arr.append(ant)
 
             if ant.performance == self.total_clauses_num:
                 return ant
         
-        self.evaporate()
-
         # online search
         for _ in range(n_offline_ants, total_ants):
-            ant = self.generateAnt()
+            ant = self.generateAnt(True)
             parameters = ant.getParameters(self.graph, self.variables)
             ant.performance = self.performance(parameters)
 
@@ -118,7 +117,7 @@ class ACO:
 
     def addPheromones(self, ant: Ant):
         def pheromonesEquation(performance):
-            return performance * 2 # + ant.index
+            return performance * 2 + ant.index
 
         add_pheromones = pheromonesEquation(ant.performance)
         for v in self.variables:
