@@ -1,4 +1,5 @@
 import time
+import math
 from random import choice
 
 class Ant:
@@ -54,14 +55,15 @@ class ACO:
         self.current_index: int         = 0
         self.ants_arr: list[Ant]        = []
         self.max_pheromones             = 0
+        self.best_performance           = 0
 
     def readSAT(self):
         with open(self.file_path, 'r') as file:
             for line in file:
                 line = line.strip()
                 clause = {}
-                for num in line.split():
-                    if num.isdigit():
+                for num in line.split(sep=' '):
+                    try:
                         num = int(num)
                         if num > 0:
                             clause[num] = 1
@@ -69,6 +71,8 @@ class ACO:
                             clause[abs(num)] = -1
 
                         self.variables.append(num)
+                    except ValueError:
+                        continue
 
                 self.clauses.append(clause)
 
@@ -117,10 +121,24 @@ class ACO:
         return max(self.ants_arr, key=lambda ant: ant.performance)
 
     def addPheromones(self, ant: Ant):
-        def pheromonesEquation(performance):
-            return performance * 2 # + ant.index
+        def pheromonesEquation(ant: Ant):
+            performance = ant.performance / self.total_clauses_num
+            e: float = 2.71
+            sig: float = 1 / (1 + (e ** (-performance + 0.45)))
+            performance_component: float = (sig + 0.55) ** 20
 
-        add_pheromones = pheromonesEquation(ant.performance)
+            stamp = math.ceil(math.log10(ant.index+1))
+            index_component = 3.5 * stamp
+
+            pheromones = (performance_component + index_component) / 2
+
+            if performance >= self.best_performance: 
+                pheromones += 5
+                self.best_performance = performance
+            
+            return pheromones
+
+        add_pheromones = pheromonesEquation(ant)
         for v in self.variables:
             chosen_param = ant.parameters[v]
             self.graph[v][chosen_param] += add_pheromones

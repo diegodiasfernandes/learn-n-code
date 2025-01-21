@@ -3,8 +3,8 @@ from randomSearch import RandomSearch
 
 aco = ACO('max3sat_aco\examples\SAT1.txt')
 best_ant, time = aco.initialize()
-
-#print(aco.graph)
+print('=================================================')
+print(aco.graph)
 print('=================================================')
 print(str(best_ant.performance))
 print(f'Finished in {time}s')
