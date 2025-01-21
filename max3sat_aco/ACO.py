@@ -57,6 +57,9 @@ class ACO:
         self.max_pheromones             = 0
         self.best_performance           = 0
 
+        self.total_ants: int            = 100
+        self.n_offline_ants: int        = 10
+
     def readSAT(self):
         with open(self.file_path, 'r') as file:
             for line in file:
@@ -89,9 +92,9 @@ class ACO:
 
         return ant, (end-start)
 
-    def colonize(self, n_offline_ants = 10, total_ants = 100):
+    def colonize(self):
         # offline search
-        for _ in range(n_offline_ants):
+        for _ in range(self.n_offline_ants):
             ant = self.generateAnt(True)
             parameters = ant.getParameters(self.graph, self.variables)
             ant.performance = self.performance(parameters)
@@ -105,7 +108,7 @@ class ACO:
         self.evaporate()
 
         # online search
-        for _ in range(n_offline_ants, total_ants):
+        for _ in range(self.n_offline_ants, self.total_ants):
             ant = self.generateAnt()
             parameters = ant.getParameters(self.graph, self.variables)
             ant.performance = self.performance(parameters)
@@ -148,15 +151,17 @@ class ACO:
     def evaporate(self):
         for v in self.variables:
             for option in self.graph[v].keys():
-                self.graph[v][option] = max(10, round(self.graph[v][option] * (90/100), 2))
+                evaporation_rate = 90 / 100
+                new_pheromones = round(self.graph[v][option] * evaporation_rate, 2)
+                self.graph[v][option] = max(10, new_pheromones)
         
     def generateAnt(self, alpha_zero: bool = False) -> Ant:
         if alpha_zero:
             ant = Ant(self.current_index, 0)
 
         else:
-            alpha_map: dict[int, float] = {0: 0.8, 1: 1, 2: 3}
-            ant = Ant(self.current_index, alpha_map[self.current_index % 3])
+            alpha_map: dict[int, float] = {0: 0.8, 1: 1, 2: 2, 3: 3}
+            ant = Ant(self.current_index, alpha_map[self.current_index % 4])
         
         self.current_index += 1
 
