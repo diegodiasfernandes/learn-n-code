@@ -56,7 +56,7 @@ class RandomSearch:
         self.ants_arr: list[Ant]        = []
         self.best_performance           = 0
 
-        self.total_ants: int            = 500
+        self.total_ants: int            = 100
         self.n_offline_ants: int        = 15
 
     def readSAT(self):

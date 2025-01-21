@@ -45,7 +45,7 @@ class ACO:
         self.ants_arr: list[Ant]        = []
         self.best_ant: Ant              = Ant(-1, 0, -1)
 
-        self.total_ants: int            = 500
+        self.total_ants: int            = 100
         self.n_offline_ants: int        = 20
 
     def readSAT(self):
@@ -159,7 +159,7 @@ class ACO:
         self.graph = {v: {True: min_phero, False: min_phero} for v in self.variables}
 
     def getParameters(self, ant: Ant):
-        if ant.index % self.n_offline_ants == self.n_offline_ants - 1:
+        if ant.index % self.n_offline_ants == self.n_offline_ants - 1 and ant.alpha != 0:
             ant.parameters = self.best_ant.parameters
             return ant.parameters
 
