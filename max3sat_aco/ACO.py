@@ -89,7 +89,7 @@ class ACO:
 
         return ant, (end-start)
 
-    def colonize(self, n_offline_ants = 50, total_ants = 500):
+    def colonize(self, n_offline_ants = 10, total_ants = 100):
         # offline search
         for _ in range(n_offline_ants):
             ant = self.generateAnt(True)
@@ -124,7 +124,7 @@ class ACO:
         def pheromonesEquation(ant: Ant):
             performance = ant.performance / self.total_clauses_num
             e: float = 2.71
-            sig: float = 1 / (1 + (e ** (-performance + 0.45)))
+            sig: float = 1 / (1 + (e ** (-performance + 0.4)))
             performance_component: float = (sig + 0.55) ** 20
 
             stamp = math.ceil(math.log10(ant.index+1))
@@ -151,11 +151,11 @@ class ACO:
                 self.graph[v][option] = max(10, round(self.graph[v][option] * (90/100), 2))
         
     def generateAnt(self, alpha_zero: bool = False) -> Ant:
-        if alpha_zero or self.current_index % 10 == 0:
+        if alpha_zero:
             ant = Ant(self.current_index, 0)
 
         else:
-            alpha_map: dict[int, float] = {0: 1.4, 1: 1, 2: 0.8}
+            alpha_map: dict[int, float] = {0: 0.8, 1: 1, 2: 3}
             ant = Ant(self.current_index, alpha_map[self.current_index % 3])
         
         self.current_index += 1

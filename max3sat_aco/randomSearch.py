@@ -85,7 +85,7 @@ class RandomSearch:
 
         return ant, (end-start)
 
-    def colonize(self, n_offline_ants = 50, total_ants = 500):
+    def colonize(self, n_offline_ants = 10, total_ants = 100):
         # offline search
         for _ in range(n_offline_ants):
             ant = self.generateAnt(True)
