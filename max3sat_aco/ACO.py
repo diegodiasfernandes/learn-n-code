@@ -35,7 +35,7 @@ class Ant:
         return chosen_option
 
 class ACO:
-    def __init__(self, file_path: str = 'path_to_sat_file', total_ants:int=500):
+    def __init__(self, file_path: str = 'path_to_sat_file', total_ants:int=500, n_offline_ants: int = 20):
         self.file_path: str             = file_path
         self.variables: set             = set()
         self.clauses: list[dict]        = []
@@ -46,7 +46,7 @@ class ACO:
         self.best_ant: Ant              = Ant(-1, 0, -1)
 
         self.total_ants: int            = total_ants
-        self.n_offline_ants: int        = 20
+        self.n_offline_ants: int        = n_offline_ants
 
     def readSAT(self):
         with open(self.file_path, 'r') as file:
