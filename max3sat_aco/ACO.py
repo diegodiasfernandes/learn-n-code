@@ -155,7 +155,7 @@ class ACO:
         return ant
 
     def buildGraph(self):
-        min_phero = 1
+        min_phero = 10
         self.graph = {v: {True: min_phero, False: min_phero} for v in self.variables}
 
     def getParameters(self, ant: Ant):
