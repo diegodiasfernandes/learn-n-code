@@ -13,6 +13,7 @@ class Ant:
         return f'Ant {self.index}: {self.parameters} \n  Performance => {self.performance}'
 
     def nextMove(self, value_options: dict, alpha: float):
+        # Calculates the value (T/F) for the next variable given the pheromones and alpha 
         def adjustPheromones():
             sum: float = 0
             alpha_pheromones: list[float] = []
@@ -25,6 +26,7 @@ class Ant:
 
         keys, alpha_pheromones, total_sum = adjustPheromones()
 
+        # Pick a value using probabilities
         percentage = [round((pheromone / total_sum) * 100) for pheromone in alpha_pheromones]
         probabilities: list[bool] = []
         for key, repetitions in zip(keys, percentage):
@@ -49,6 +51,7 @@ class ACO:
         self.n_offline_ants: int        = n_offline_ants
 
     def readSAT(self):
+        # read and store the clauses and variables
         with open(self.file_path, 'r') as file:
             for line in file:
                 line = line.strip()
@@ -111,6 +114,7 @@ class ACO:
         return max(self.ants_arr, key=lambda ant: ant.performance)
 
     def addPheromones(self, ant: Ant, offline_phase: bool = False):
+        # implements the pheromone disposition equation
         def pheromonesEquation(ant: Ant):
             performance = ant.performance / self.total_clauses_num
             performance_component = (performance ** 10) * 100
@@ -133,6 +137,7 @@ class ACO:
             self.graph[v][chosen_param] += add_pheromones
 
     def evaporate(self):
+        # Decreasingly removes a percentage of the pheromones in all edges
         for v in self.variables:
             for option in self.graph[v].keys():
                 evaporation_rate = 90 / 100
@@ -141,12 +146,14 @@ class ACO:
         
     def generateAnt(self, alpha_zero: bool = False) -> Ant:
         if alpha_zero:
+            # offline ants
             ant = Ant(self.current_index, 0)
 
         else:
+            # rate that explorer/exploiter ants are generated
             rate = 10
             alpha_map: dict[int, float] = {mod:1 for mod in range(rate)}
-            alpha_map[rate-1] = 0.8
+            alpha_map[rate-1] = 0.6
             alpha_map[rate-2] = 1.2
             ant = Ant(self.current_index, alpha_map[self.current_index % rate])
         
@@ -155,14 +162,17 @@ class ACO:
         return ant
 
     def buildGraph(self):
+        # initializes the graph with 10 pheromones at each edge
         min_phero = 10
         self.graph = {v: {True: min_phero, False: min_phero} for v in self.variables}
 
     def getParameters(self, ant: Ant):
         if ant.index % self.n_offline_ants == self.n_offline_ants - 1 and ant.alpha != 0:
+            # re-lauches the global best ant
             ant.parameters = self.best_ant.parameters
             return ant.parameters
 
+        # Generates a solution
         parameters = {}
         for v in self.variables:
             next_options = self.graph[v]
@@ -174,6 +184,7 @@ class ACO:
         return parameters
 
     def performance(self, ant: Ant): # parameters = {0: True, 1: False}
+        # Calculates the performance (# of sat clauses)
         count = 0
         for clause in self.clauses:
             for variable in clause.keys():
