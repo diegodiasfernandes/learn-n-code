@@ -200,3 +200,10 @@ class ACO:
             self.best_ant = ant
 
         return count
+    
+if __name__ == "__main__":
+    path_to_sat = 'max3sat_aco\examples\SAT3.txt'
+    aco = ACO(path_to_sat)
+    best_ant, time = aco.initialize()
+    print(f'Performance: {best_ant.performance}')
+    print(f'Time spent (s): {time}')
